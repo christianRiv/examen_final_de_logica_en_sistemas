@@ -3,18 +3,23 @@
 #christian ivan rivera marroquin
 #carne: 0907-19-14757
 
+
+
+#----------- no funciono de la forma que pense hacerlo :( espero llegar a ganar GG
+
+
 from tkinter import*
 raiz=Tk()
 miFrame=Frame(raiz, width=1200, height=600)
+
 miFrame.pack()
 
-operacione=""
-resultado=0
+operacion=""
 
-#
-
-numeropantalla=StringVar()
-
+#-----------------funcion multiplicar---------
+def multiplicar():
+    global operacion
+    operacion="multiplicacion"
 
 #---------------- aca son las ventanas donde se teclea------------
 
@@ -44,11 +49,13 @@ cuadroresultado=Label(miFrame, text="resulado final")
 cuadroresultado.grid(row=3, column=0)
 
 #-----------los botones------------
-boton1=Button(miFrame, text= "validacion") #validar
+boton1=Button(miFrame, text= "validacion", command=lambda:multiplicar()) #validar
 boton1.grid(row=4, column=1,)
 
 boton2=Button(miFrame, text="ejecucion")#ejecuta las funcion
 boton2.grid(row=5, column=1)
+
+
 
 
 raiz.mainloop()
